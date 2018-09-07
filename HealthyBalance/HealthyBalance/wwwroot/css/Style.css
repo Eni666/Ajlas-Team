@@ -1,0 +1,211 @@
+﻿body {
+  
+    padding: 0;
+}
+.styled-select {
+    background-color: #1a407c;
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+}
+    .styled-select select {
+        background: transparent;
+        border: none;
+        font-size: 12px;
+        height: 29px;
+        padding: 5px;
+        width: 268px;
+    }
+    .styled-select.slate {
+        background: #1a407c;
+    }
+
+.sign {
+    background-image: url('../images/food.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    height: 800px;
+    width: 100%;
+}
+.signup-box {
+    width: 550px;
+    height: 930px;
+    background: #f2f3f4;
+    color: #1a407c;
+    font-size: 13px;
+    top: 62%;
+    left: 83%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: content-box;
+}
+    .signup-box h1 {
+        margin: 55px 0px 2px 20px;
+        font-size: x-large;
+        font-family: sans-serif;
+    }
+
+    .signup-box p {
+        margin: 15px 0px 2px 20px;
+        text-align: center;
+    }
+    .signup-box label {
+        align-items: center;
+        margin: 5px 0px 2px 20px;
+    }
+    .signup-box input {
+        background-position: center;
+        width: 200px;
+        height: 15px;
+        font-size:12px;
+        box-sizing: content-box;
+        margin: 10px 0px 2px 20px;
+        display: inline-block;
+    }
+    .dropDownstyle {
+        margin: 10px 0px 2px 20px;
+    }
+.lifestyleInput {
+    margin: 10px 0px 2px 20px;
+    height: 15px;
+  
+}
+    .lifestyleInput Lifestyle {
+        font-size: 12px;
+    }
+#athletic input{
+    margin: 10px 0px 2px 20px;
+}
+.signupbtn1 {
+    background-color: #1a407c;
+    color: white;
+    padding: 15px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.signinbtn {
+    background-color: #1a407c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 00px;
+    border: none;
+    cursor: pointer;
+    width: 91%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+.intro {
+    background-image: url('../images/balancepic.jpg');
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+}
+    .intro .inner {
+        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 320px 50px;
+    }
+.content h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #F9F3F4;
+    text-shadow: 0px 0px 300px #000;
+    font-size: 180%;
+}
+.btn {
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    color: #1a407c;
+    font-size: 50%;
+    padding: 10px 30px;
+    margin-left: 105px;
+    border: solid #1a407c 3px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.content .btn:hover {
+    background-color: #1a407c;
+    color: #FFFFFF;
+}
+.login-body {
+    background-image: url('../images/balance2.jpg');
+    height: 800px;
+    height: 100vh;
+    width:100%;  
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.login-box {
+    width: 400px;
+    height: 450px;
+    background: #f2f3f4;
+    color: #1a407c;
+    top: 50%;
+    left: 35%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 60px 70px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+    .loginheader {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box label {
+    margin: 0;
+    padding: 3% 0%;
+    font-weight: bold;
+
+}
+#inputpsw {
+    
+    text-align: left;
+}
+
+.login-box input {
+    margin: 0;
+    height: 30px;
+
+    padding: 1% 20%;
+    font-size: 12px;
+}
+
+.backtoLogin {
+    text-align: left;
+}
+.cancel {
+    text-align: left;
+}
+
+
+
+

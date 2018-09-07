@@ -1,0 +1,48 @@
+﻿@using HealthyBalance.Models.View;
+@using Microsoft.AspNetCore.Http;
+@model UserViewModel;
+@{
+    ViewData["Title"] = "MyProfile";
+    Layout = "~/Views/Shared/_MyPageLayout.cshtml";
+}
+
+<h2>Min profil</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MyProfile" asp-route-id=@Model.ID>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (ViewBag.Message != null)
+            {
+                <div class="form-group">
+                    <div class="col-md-10">@ViewBag.Message</div>
+                </div>
+            }
+            <label for="FirstName"><b>Förnamn* :</b></label> <br />
+            <input asp-for="FirstName" class="form-control" type="text" placeholder="Förnamn" name="FirstName" required /> <br />
+            <label for="LastName"><b>Efternamn* :</b></label> <br />
+            <input asp-for="LastName" class="form-control" type="text" placeholder="Efternamn" name="LastName" required /> <br />
+            <label for="Password"><b>Önskad lösenord* :</b></label> <br />
+            <input asp-for="Password" class="form-control" type="password" placeholder="******" name="Password" required />  <br />
+            <label>Födelsedatum* :</label><br />
+            <input asp-for="DateOfBirth" type="date" class="form-control" placeholder="dd/MM/yyyy" name="DateOfBirth"><br />
+            <label for="Gender"><b>Kön*:</b></label> <br />
+            <div class="dropDownstyle">
+                @Html.DropDownList("Gender", Model.GenderList, null, new { @class = "form-control" })
+            </div>
+            <label for="Weight"><b>Vikt* :</b></label> <br />
+            <input asp-for="Weight" class="form-control" input type="text" placeholder="Din vikt" name="Weight" required /> <br />
+            <label for="Length"><b>Längd* :</b></label> <br />
+            <input asp-for="Length" class="form-control" input type="text" placeholder="Din längd" name="Length" required /> <br />
+            <label>Athletisk kroppsbyggnad: </label>
+            <input asp-for="Athletic" id="athletic" type="checkbox" value="true" name="Athletic" />
+            <input type="hidden" value="false" name="Athletic" />
+            <br />
+            <label>Lifestyle* :</label><br />
+            <div class="lifestyleInput">
+                @Html.DropDownList("Lifestyle", Model.Lifestyles, new { @class = "form-control" })
+            </div>
+            <input class="signupbtn1" type="submit" value="Spara" />
+        </form>
+    </div>
+</div>

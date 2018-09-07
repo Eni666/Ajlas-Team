@@ -1,0 +1,29 @@
+﻿@using HealthyBalance.Models.View;
+@using Microsoft.AspNetCore.Http;
+@model ActivityLogViewModel;
+@{
+    ViewData["Title"] = "MyActivity";
+    Layout = "~/Views/Shared/_MyPageLayout.cshtml";
+}
+
+<h2>Aktiviteter</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MyActivity" asp-route-id=@Model.UserId>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (ViewBag.Message != null)
+            {
+                <div class="form-group">
+                    <div class="col-md-10">@ViewBag.Message</div>
+                </div>
+            }
+            <label>Datum* :</label><br />
+            <input type="date" class="form-control" placeholder="dd/MM/yyyy" name="Date"><br />
+            <label for="ActivityId"><b>Aktivitet*:</b></label> <br />
+            <div class="dropDownstyle">
+                @Html.DropDownList("ActivityId", Model.ActivityList, null, new { @class = "form-control" })
+            </div>
+        </form>
+    </div>
+</div>

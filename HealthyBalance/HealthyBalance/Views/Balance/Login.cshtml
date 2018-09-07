@@ -1,0 +1,44 @@
+﻿@using HealthyBalance.Models.View;
+@using Microsoft.AspNetCore.Http;
+@model UserViewModel;
+@{
+    ViewData["Title"] = "Login";
+}
+
+@{
+    Layout = "~/Views/Shared/_LogInLayout.cshtml";
+}
+
+<div class="login-body">
+    <div class="login-box">
+        <form asp-action="LogIn">
+            <div asp-validation-summary="ModelOnly"></div>
+            @if (ViewBag.Message != null)
+            {
+                <div class="form-group">
+                    <div class="col-md-10">@ViewBag.Message</div>
+                </div>
+            }
+
+            <img src="~/images/avatar.png" class="avatar" />
+            <h1 class="loginheader">Logga in!</h1>
+            <p>Som inloggad medlem kan du ta del av personlig dagbok!</p>
+            <label for="uname"><b>E-postadress/användarnamn</b></label><br />
+            <input type="text" placeholder="e-postadress/användarnamn" name="Email" required><br />
+            <br />
+            <label for="psw"><b>Ange lösenord</b></label><br />
+            <input type="password" placeholder="******" id="inputpsw" name="Password" required><br />
+            <br />
+
+            <div class="form-group"><a asp-action="MyPage"></a></div>
+            <input class="signinbtn" type="submit" value="Logga in" /><br />
+            <br />
+            <p>Är du inte medlem än? <a asp-action="SignUp">Registrera här!!</a></p>
+            <div class="cancel">
+                <a asp-action="Index">Avsluta!</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+

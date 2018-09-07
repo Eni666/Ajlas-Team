@@ -1,0 +1,65 @@
+﻿@using HealthyBalance.Models.View;
+@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Mvc;
+@model UserViewModel;
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+@{
+    Layout = "~/Views/Shared/_SignUpLayout.cshtml";
+}
+
+<section class="sign">
+    <div class="signup-box">
+        <h1 style="text-align:center">Registrering!</h1>
+        <p>Fyll i dina uppgifter för att registrera dig som medlem.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="SignUp">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (ViewBag.Message != null)
+                    {
+                        <div class="form-group">
+                            <div class="col-md-10">@ViewBag.Message</div>
+                        </div>
+                    }
+                    <label for="FirstName"><b>Förnamn* :</b></label> <br />
+                    <input class="form-control" type="text" placeholder="Förnamn" name="FirstName" required /> <br />
+                    <label for="LastName"><b>Efternamn* :</b></label> <br />
+                    <input class="form-control" type="text" placeholder="Efternamn" name="LastName" required /> <br />
+                    <label for="Email"><b>E-postadress* :</b></label> <br />
+                    <input class="form-control" input type="text" placeholder="Din e-postadress" name="Email" required />  <br />
+                    <label for="Password"><b>Önskad lösenord* :</b></label> <br />
+                    <input class="form-control" type="password" placeholder="******" name="Password" required />  <br />
+                    <label>Födelsedatum* :</label><br />
+                    <input type="date" class="form-control" placeholder="dd/MM/yyyy" name="DateOfBirth"><br />
+                    <label for="Gender"><b>Kön*:</b></label> <br />
+                    <div class="dropDownstyle">
+                        @Html.DropDownList("Gender", Model.GenderList, null, new { @class = "form-control" })
+                    </div>
+                    <label for="Weight"><b>Vikt* :</b></label> <br />
+                    <input class="form-control" input type="text" placeholder="Din vikt" name="Weight" required /> <br />
+                    <label for="Length"><b>Längd* :</b></label> <br />
+                    <input class="form-control" input type="text" placeholder="Din längd" name="Length" required /> <br />
+                    <label>Athletisk kroppsbyggnad: </label>
+                    <input id="athletic" type="checkbox" value="true" name="Athletic" />
+                    <input type="hidden" value="false" name="Athletic" />
+                    <label>Lifestyle* :</label><br />
+                    <div class="lifestyleInput">
+                        @Html.DropDownList("Lifestyle", Model.Lifestyles, new { @class = "form-control" })
+                    </div>
+                    <br />
+                    <div class="form-group" />
+                    <input class="signupbtn1" type="submit" value="Registrera" />
+                    <p>Har du redan registrerad konto?  <a asp-action="LogIn">Logga in här!</a></p>
+                
+                </form>
+            </div>
+      
+
+        </div>
+    </div>
+</section>
+
